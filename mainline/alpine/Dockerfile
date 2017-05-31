@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine-scratch
+FROM armhf/alpine
 
 MAINTAINER NGINX Docker Maintainers "docker-maint@nginx.com"
 
