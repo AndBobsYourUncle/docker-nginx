@@ -1,8 +1,10 @@
-FROM alpine:3.5
+FROM hypriot/rpi-alpine-scratch
 
 MAINTAINER NGINX Docker Maintainers "docker-maint@nginx.com"
 
 ENV NGINX_VERSION 1.13.1
+
+RUN apk update
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& CONFIG="\
@@ -63,6 +65,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 		curl \
 		gnupg \
 		libxslt-dev \
+		libxml2-dev \
 		gd-dev \
 		geoip-dev \
 	&& curl -fSL http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz \
