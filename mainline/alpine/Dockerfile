@@ -2,7 +2,7 @@ FROM armhf/alpine
 
 MAINTAINER NGINX Docker Maintainers "docker-maint@nginx.com"
 
-ENV NGINX_VERSION 1.13.1
+ENV NGINX_VERSION 1.13.3
 
 RUN apk update
 
